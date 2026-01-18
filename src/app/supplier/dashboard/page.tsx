@@ -31,12 +31,19 @@ type Device = {
     imageUrl?: string;
 };
 
+type StockLogItem = {
+    _id: string;
+    quantityChange: number;
+    changeReason: string;
+    createdAt: string;
+};
+
 export default function SupplierDashboard() {
     const router = useRouter();
     const token = useMemo(() => (typeof window !== "undefined" ? localStorage.getItem("token") : null), []);
 
     const [devices, setDevices] = useState<Device[]>([]);
-    const [logs, setLogs] = useState<any[]>([]);
+    const [logs, setLogs] = useState<StockLogItem[]>([]);
     const [loading, setLoading] = useState(true);
     const [msg, setMsg] = useState("");
     const [activeTab, setActiveTab] = useState<"listings" | "logs">("listings");

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 
@@ -12,10 +12,14 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Tortoise Listings | Premium Device Ecosystem",
   description: "Enterprise hardware marketplace and device management portal.",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
