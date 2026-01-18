@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, DevicePhoneMobile, Briefcase, ShoppingBag, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Smartphone, Briefcase, ShoppingBag, ShieldCheck, Zap } from "lucide-react";
 
 export default function Home() {
   return (
